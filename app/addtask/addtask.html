@@ -1,5 +1,5 @@
 <div class="row m-l-r-0">
-  <h3 class="text-center">Add Task <a ui-sref="taskslist()">Tasks List</a> </h3>
+  <h3 class="text-center">Add Task <a ui-sref="taskslist()">Tasks List</a> <a ui-sref="profile()">Profile</a> </h3>
   <form name="form" ng-submit="vm.addTask()" novalidate>
     <div class="form-group">
       <label for="taskname">Task Name<sup class="red">*</sup></label>
@@ -16,7 +16,7 @@
     <div class="form-group">
       <label for="priority">Priority<sup class="red">*</sup></label>
       <select class="form-control" name="priority" ng-model="vm.user.priority" required>
-        <option ng-repeat="option in vm.prioritys">{{option}}</option>
+        <option ng-repeat="option in vm.priorities">{{option}}</option>
       </select>
       <span ng-show="form.priority.$dirty && form.priority.$error.required" class="help-block">
       Priority is required</span>

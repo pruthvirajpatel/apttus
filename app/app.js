@@ -10,6 +10,11 @@ var app  = angular.module('apttus', ['ui.router']);
         url: '/taskslist',
         controller: 'TaskslistController as vm',
         templateUrl: 'app/taskslist/taskslist.html'
+      })
+      .state('profile', {
+        url: '/profile',
+        controller: 'ProfileController as vm',
+        templateUrl: 'app/profile/profile.html'
       });
      $urlRouterProvider.otherwise('/addtask');
   }]);

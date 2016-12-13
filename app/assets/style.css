@@ -22,3 +22,20 @@
 .strike-text{
   text-decoration: line-through;
 }
+
+.profile{
+  max-width: 300px;
+  margin: auto;
+  border:1px solid;
+}
+.profile img {
+  max-height: 200px;
+  max-width: 200px;
+}
+.profile figure{
+  text-align: center;
+  padding-top: 10px;
+}
+.bold{
+  font-weight: 700;
+}

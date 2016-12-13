@@ -1,0 +1,8 @@
+<h3 class="text-center"> User Information <a ui-sref="addtask()">Add Task</a> <a ui-sref="taskslist()">Tasks List</a></h3>
+<div class="form-group">
+  <label for="priority">Select name</label>
+  <select class="form-control" ng-model="vm.user">
+    <option ng-repeat="option in vm.users" value="{{option.id}}">{{option.name}}</option>
+  </select>
+</div>
+<git-profile user-name="vm.user"></git-profile>

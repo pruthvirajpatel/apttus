@@ -1,0 +1,13 @@
+<div class="text-center" ng-show="!profileInfo">
+  Select user to see the profile information.
+</div>
+<div ng-if="profileInfo" class="profile">
+  <figure>
+    <img ng-src="{{profileInfo.avatar_url}}">
+    <figcaption> <h5>{{profileInfo.name}}</h5></figcaption>
+  </figure>
+  <div class='row m-l-r-0 text-center'>
+     <span class="col-md-6 text-left bold">Followers:{{profileInfo.followers}}</span>
+     <span class="col-md-6 text-right bold">Following:{{profileInfo.following}}</span>
+  </div>
+</div>
