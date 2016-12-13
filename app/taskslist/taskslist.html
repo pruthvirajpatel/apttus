@@ -1,0 +1,19 @@
+<div class="row m-l-r-0">
+  <h3 class="text-center">Tasks List <a ui-sref="addtask()">Add Task</a> </h3>
+  <div ng-if="vm.taskslist.length">
+    <div class="row m-l-r-0 heading">
+      <h5 class="col-md-2">Name</h5>
+      <h5 class="col-md-2 cursor" ng-click="vm.sortBy ='date'; vm.dSortOrder= (vm.dSortOrder == '+'? '-':'+');">Start Date</h5>
+      <h5 class="col-md-2 cursor" ng-click="vm.sortBy ='priority'; vm.pSortOrder= (vm.pSortOrder == '+'? '-':'+');">Priority</h5>
+      <h5 class="col-md-2">Completed</h5>
+      <h5 class="col-md-4">Description</h5>
+    </div>
+    <div class="row m-l-r-0 tasklisting" ng-repeat="task in vm.taskslist | orderBy : (vm.sortBy == 'date' ? vm.dSortOrder : vm.pSortOrder) + vm.sortBy">
+      <h6 class="col-md-2">{{task.task_name}}</h6>
+      <h6 class="col-md-2">{{task.date  | date:'MM-dd-yyyy'}}</h6>
+      <h6 class="col-md-2">{{task.priority}}</h6>
+      <h6 class="col-md-2" ng-class="{'strike-text':task.completed}">{{task.completed ? 'Yes':'No'}}</h6>
+      <h6 class="col-md-4">{{task.description}}</h6>
+    </div>
+  </div>
+</div>

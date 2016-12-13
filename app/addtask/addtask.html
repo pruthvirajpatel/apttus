@@ -1,0 +1,37 @@
+<div class="row m-l-r-0">
+  <h3 class="text-center">Add Task <a ui-sref="taskslist()">Tasks List</a> </h3>
+  <form name="form" ng-submit="vm.addTask()" novalidate>
+    <div class="form-group">
+      <label for="taskname">Task Name<sup class="red">*</sup></label>
+      <input type="text" name="taskname" class="form-control" ng-model="vm.user.task_name" required/>
+      <span ng-show="form.taskname.$dirty && form.taskname.$error.required" class="help-block">
+      Task name is required</span>
+    </div>
+    <div class="form-group">
+      <label for="date">Start Date<sup class="red">*</sup></label>
+      <input type="date" name="date" class="form-control" ng-model="vm.user.date"  required/>
+      <span ng-show="form.taskname.$dirty && form.taskname.$error.required" class="help-block">
+      Start date is required</span>
+    </div>
+    <div class="form-group">
+      <label for="priority">Priority<sup class="red">*</sup></label>
+      <select class="form-control" name="priority" ng-model="vm.user.priority" required>
+        <option ng-repeat="option in vm.prioritys">{{option}}</option>
+      </select>
+      <span ng-show="form.priority.$dirty && form.priority.$error.required" class="help-block">
+      Priority is required</span>
+    </div>
+    <div class="form-group">
+      <label for="completed">Completed</label>
+      <input type="checkbox" name="completed" class="form-control" ng-model="vm.user.completed" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description" id="description" class="form-control" ng-model="vm.user.description"></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Submit</button>
+      <button type="button" ng-click="vm.reset();" class="btn btn-primary">Reset</button>
+    </div>
+  </form>
+</div>

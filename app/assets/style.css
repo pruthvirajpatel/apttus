@@ -1,0 +1,24 @@
+.m-l-r-0{
+  margin-left: 0;
+  margin-right: 0;
+}
+.red{
+  color: red;
+}
+.cursor{
+  cursor: pointer;
+}
+.heading{
+  border: 1px solid #e0dede;
+}
+.tasklisting{
+  border-right: 1px solid #e0dede;
+  border-left: 1px solid #e0dede;
+  border-bottom: 1px solid #e0dede;
+}
+.heading h5{
+  display: inline-block;
+}
+.strike-text{
+  text-decoration: line-through;
+}
